@@ -1,0 +1,77 @@
+/* Configurações gerais para resetar margens */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+/* Estilização do Cabeçalho */
+.cabecalho {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 40px;
+    background-color: #1a202c; /* Cor de fundo escura e moderna */
+    color: #ffffff;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+/* Título do Projeto */
+.logo-titulo h1 {
+    font-size: 1.5rem;
+    font-weight: 700;
+    letter-spacing: 1px;
+}
+
+.logo-titulo span {
+    font-size: 0.9rem;
+    color: #4fd1c5; /* Cor de destaque para o 'IFA' */
+    font-weight: 600;
+    text-transform: uppercase;
+}
+
+/* Menu de Navegação */
+.menu-navegacao {
+    display: flex;
+    gap: 15px; /* Espaçamento entre os botões */
+}
+
+/* Estilização dos Botões de Encaminhamento */
+.botao-nav {
+    text-decoration: none;
+    color: #ffffff;
+    background-color: #2d3748;
+    padding: 10px 20px;
+    border-radius: 8px;
+    font-size: 1rem;
+    font-weight: 500;
+    transition: all 0.3s ease; /* Efeito suave ao passar o mouse */
+    border: 1px solid transparent;
+}
+
+/* Efeito Hover (passar o mouse por cima) */
+.botao-nav:hover {
+    background-color: #4fd1c5;
+    color: #1a202c;
+    transform: translateY(-2px); /* Leve levantamento do botão */
+    box-shadow: 0 4px 12px rgba(79, 209, 197, 0.3);
+}
+
+/* Responsividade para telas menores (Celulares) */
+@media (max-width: 768px) {
+    .cabecalho {
+        flex-direction: column;
+        gap: 20px;
+        text-align: center;
+    }
+
+    .menu-navegacao {
+        flex-direction: column;
+        width: 100%;
+    }
+
+    .botao-nav {
+        width: 100%;
+    }
+}
