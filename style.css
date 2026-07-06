@@ -75,3 +75,149 @@
         width: 100%;
     }
 }
+/* Configurações Gerais da Seção */
+.projeto-robotica {
+  background-color: #1a1a24;
+  color: #ffffff;
+  padding: 60px 20px;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.container-robotica {
+  max-width: 1100px;
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 40px;
+  flex-wrap: wrap; /* Garante que fique responsivo em telas menores */
+}
+
+/* Coluna de Texto */
+.conteudo-robotica {
+  flex: 1;
+  min-width: 300px;
+}
+
+.tag-robotica {
+  background-color: #007bff;
+  color: #fff;
+  font-size: 0.8rem;
+  text-transform: uppercase;
+  padding: 5px 12px;
+  border-radius: 20px;
+  font-weight: bold;
+  letter-spacing: 1px;
+}
+
+.conteudo-robotica h2 {
+  font-size: 2.5rem;
+  margin: 15px 0;
+  color: #00d2ff;
+}
+
+.conteudo-robotica p {
+  font-size: 1.1rem;
+  line-height: 1.6;
+  color: #ccd6f6;
+  margin-bottom: 15px;
+}
+
+.detalhes-experimento {
+  list-style: none;
+  padding: 0;
+  margin-top: 20px;
+}
+
+.detalhes-experimento li {
+  margin-bottom: 10px;
+  font-size: 1rem;
+  position: relative;
+  padding-left: 20px;
+}
+
+.detalhes-experimento li::before {
+  content: "⚡";
+  position: absolute;
+  left: 0;
+  color: #00d2ff;
+}
+
+/* Coluna Visual (Disco e Motor) */
+.visual-robotica {
+  flex: 1;
+  min-width: 300px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.disco-container {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+/* O Disco Colorido com Gradiente Cônico */
+.disco-newton {
+  width: 200px;
+  height: 200px;
+  border-radius: 50%;
+  border: 5px solid #333;
+  box-shadow: 0 10px 25px rgba(0,0,0,0.5);
+  background: conic-gradient(
+    red 0deg 51deg, 
+    orange 51deg 102deg, 
+    yellow 102deg 153deg, 
+    green 153deg 204deg, 
+    blue 204deg 255deg, 
+    indigo 255deg 306deg, 
+    violet 306deg
+  );
+  /* Animação que faz o disco girar simulando o motor DC */
+  animation: girarDisco 0.8s linear infinite;
+}
+
+/* Base simulando o motor */
+.motor-base {
+  width: 40px;
+  height: 60px;
+  background-color: #555;
+  border-radius: 4px;
+  margin-top: -5px;
+  z-index: -1;
+}
+
+.legenda-visual {
+  margin-top: 15px;
+  font-size: 0.9rem;
+  color: #8892b0;
+  font-style: italic;
+}
+
+/* Animação CSS para o giro */
+@keyframes girarDisco {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+/* Responsividade para Celulares */
+@media (max-width: 768px) {
+  .container-robotica {
+    flex-direction: column;
+    text-align: center;
+  }
+  
+  .detalhes-experimento li {
+    padding-left: 0;
+  }
+  .detalhes-experimento li::before {
+    display: none;
+  }
+}
