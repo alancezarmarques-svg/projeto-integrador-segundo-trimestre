@@ -19,6 +19,7 @@
 .banner{
   text-align: center;
   align-items: center;
+  width: 100%;
 }
 /* Título do Projeto */
 .logo-titulo h1 {
